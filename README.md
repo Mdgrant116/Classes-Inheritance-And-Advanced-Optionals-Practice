@@ -85,5 +85,22 @@ Sometimes you don’t want to just override and action completely though, someti
 
 When you write a function it helps you reduce the amount of code by packaging a bunch of instructions inside one neat package. When you create classes, and inherit from classes, you’re doing the same. Saving yourself from repeating bits of code.
 
+## **Structs VS Classes**
+
+Structs are like Jon Snow, unable in inherit, while classes are more like Robb Stark, able to inherit all that its parent can provide. 
+
+Structs give you a free initializer, so you don’t have to write an init method, however with classes, if you don’t specify the type or give your property a value, it will tell you that it has no initializers. With classes you have to provide the init yourself.
+
+After you write the init method, when you initialize that blueprint, you will have to provide the values you’re initializing.
+
+Classes are passed by reference, so if you’re not careful, you could be changing something unintentionally. This is why classes are considered more error prone than structs.
+
+In a struct, you’re reminded when you mutate something, because there will be a mutating keyword. When mutating a struct, its destroys the old struct, and creates a new one, so you can’t use a let constant when initializing it. 
+
+Structs are passed around by value, so if I had a pizza, instead of giving you my pizza, I’d have to make another one for you. Classes are different. Instead of giving you your own pizza, I’d tell you where mine was, and if you ate a slice, I’d have one less slice. 
+
+With structs, if multiple people wanted pizza, they’d all have their very own pizza, and if they added toppings, it wouldn’t effect mine. But if my pizza were a class, and someone truly devious decided to cover it in chocolate, I’d send my newly created Cyclops to decimate them with its eyeBeam attack because that’s our only pizza, and its covered in chocolate.
+
+This is why apple advises that you always default to creating a struct whenever you need a blueprint to create new objects, but if you find you need inheritance, you can turn your structure into a class.
 
 
