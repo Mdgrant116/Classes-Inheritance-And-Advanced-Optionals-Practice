@@ -58,13 +58,29 @@
 			children = (
 				4E8783C62382DBED0037EDD9 /* AppDelegate.swift */,
 				4E8783C82382DBED0037EDD9 /* SceneDelegate.swift */,
-				4E8783CA2382DBED0037EDD9 /* ViewController.swift */,
-				4E8783CC2382DBED0037EDD9 /* Main.storyboard */,
+				4E8783DB2382DC1E0037EDD9 /* Controllers */,
+				4E8783DA2382DC0A0037EDD9 /* View */,
 				4E8783CF2382DBEE0037EDD9 /* Assets.xcassets */,
 				4E8783D12382DBEE0037EDD9 /* LaunchScreen.storyboard */,
 				4E8783D42382DBEE0037EDD9 /* Info.plist */,
 			);
 			path = "Classes, Inheritance, And Advanced Optionals Practice";
+			sourceTree = "<group>";
+		};
+		4E8783DA2382DC0A0037EDD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E8783CC2382DBED0037EDD9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E8783DB2382DC1E0037EDD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E8783CA2382DBED0037EDD9 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
