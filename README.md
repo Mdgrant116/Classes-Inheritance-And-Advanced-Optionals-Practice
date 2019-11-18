@@ -103,4 +103,62 @@ With structs, if multiple people wanted pizza, they’d all have their very own 
 
 This is why apple advises that you always default to creating a struct whenever you need a blueprint to create new objects, but if you find you need inheritance, you can turn your structure into a class.
 
+## **Optional Binding, Chaining, And Nil Coalescing**
+
+Here are five different ways of working with optionals in Swift.
+
+1. Force Unwrapping
+
+Requires us to know with 100% certainty that our value will not be nil or the app will crash. Probably the least safe way of working with optionals.
+
+    myOptional!
+
+2. Check For Nil Value
+
+A slightly safer way to deal with optionals would be to unwrap them. 
+
+    if myOptional != nil {
+
+        // Do the thing
+
+    } else {
+
+        // Where you would handle a nil value
+        
+        }
+
+This way, it skips this code block if the value is nil, but this whole option is pretty wordy, and there are a lot of extra lines of code when there is a better way. Optional Binding.
+
+3. Optional Binding
+
+With this option, you can create a new constant, and bind the value of the optional to it. We can now work with the safe version without worry.
+
+    if let safeOptional = myOptional {
+
+        let text: String = safeOptional
+
+    }
+
+But this just skips the code block if the value is nil, there is another way to go about this if we wanted to provide a default value if the value is nil. Nil Coalescing.
+
+
+4. Nil Coalescing Operator 
+
+What it does is it checks if the optional is nil. If its not nil, its going to use the value, but if it is nil, its going to use the provided default value.
+
+    let text: String = myOptional ?? “I am the default value”
+
+5. Optional Chaining
+
+All of those options cover if you have a simple optional value, but there are certain cases where you’ll have an optional class, or an optional struct. Because our optional has some methods and properties that are accessed using the . notation, in order to get to it, we add a question mark.
+
+        myOptionalClass?.myProperty
+
+What this says is if this object is not optional, continue along this chain and access it.
+
+
+
+
+
+
 
